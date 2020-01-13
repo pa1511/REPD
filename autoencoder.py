@@ -129,6 +129,7 @@ class AutoEncoder:
         self.transform(X)
         
     def close(self):
+        tf.reset_default_graph()
         self.sess.close()
         
     def debugPrint(self):
